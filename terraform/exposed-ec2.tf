@@ -11,3 +11,4 @@ resource "aws_security_group" "open_ssh" {
     yor_trace = "222d7f1b-a07d-4dc3-b1eb-6b2573d7b287"
   }
 }
+
