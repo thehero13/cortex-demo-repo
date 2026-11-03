@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: insecure-web
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: insecure-web
+  template:
+    metadata:
+      labels:
+        app: insecure-web
+    spec:
+      hostNetwork: true
+      hostPID: true
+      containers:
+        - name: web
+          image: nginx:latest
+          securityContext:
+            allowPrivilegeEscalation: true
+            readOnlyRootFilesystem: false
+            capabilities:
+              add: ["SYS_ADMIN", "NET_ADMIN"]
+          volumeMounts:
+            - name: host-root
+              mountPath: /host
+      volumes:
+        - name: host-root
+          hostPath:
+            path: /
