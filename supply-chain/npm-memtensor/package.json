@@ -1,0 +1,9 @@
+{
+  "name": "sc-test-memtensor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cortex Supply Chain test fixture - DO NOT INSTALL",
+  "dependencies": {
+    "@memtensor/memos-cloud-openclaw-plugin": "0.1.21"
+  }
+}
