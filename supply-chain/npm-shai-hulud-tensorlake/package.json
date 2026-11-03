@@ -1,0 +1,9 @@
+{
+  "name": "sc-test-tensorlake",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cortex Supply Chain test fixture - DO NOT INSTALL",
+  "dependencies": {
+    "tensorlake": "0.5.144"
+  }
+}
